@@ -2,12 +2,12 @@ import React from 'react';
 import {Button,} from 'react-bootstrap';
 const {Kakao} = window;
 
-const KakaoShareBtn = () => {
+const KakaoShareBtn = ({data}) => {
 
     const url = "https://mmmbittest.netlify.app/"
     const resultUrl = window.location.href;
     
-    console.log('ddd', url, resultUrl);
+    // console.log('ddd', url, resultUrl);
 
 
     React.useEffect(() => {
@@ -21,12 +21,13 @@ const KakaoShareBtn = () => {
         objectType: 'feed',
         content: {
           title: '예비집사 판별기 결과',
-          description: '예비 집사님이 고양이를 키운다면 가장 잘맞는 고양이는 00입니다.',
-          imageUrl:
-            'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+          description: `예비 집사님이 고양이를 키운다면 가장 잘맞는 고양이는 ${data.name}입니다.`,
+          imageUrl:url + data.image,
+            // 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
           link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            androidExecutionParams: 'test',
+            mobileWebUrl: resultUrl,
+            webUrl:resultUrl,
+            // androidExecutionParams: 'test',
           },
         },
 
@@ -34,7 +35,8 @@ const KakaoShareBtn = () => {
           {
             title: '나도 테스트 하러가기',
             link: {
-              mobileWebUrl: url,
+                mobileWebUrl: url,
+                webUrl:url,
             },
           },
 

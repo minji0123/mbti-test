@@ -34,7 +34,7 @@ const Result = () => {
                 <Button variant="outline-success" style={{fontSize: "20px"}}
                         onClick={() => navigate("/")}
                 >테스트 다시하기</Button>
-                <KakaoShareBtn/>
+                <KakaoShareBtn data={resultData}/>
                 
             </ButtonGroup>
 
