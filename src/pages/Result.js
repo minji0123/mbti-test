@@ -1,7 +1,6 @@
 import React, { useEffect,useState } from 'react';
 // styled-componemt
 import styled from 'styled-components';
-import PangImage from '../assets/cat-logo2.jpg'
 import {Button,} from 'react-bootstrap';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ResultData } from "../assets/data/resultdata";
@@ -26,8 +25,7 @@ const Result = () => {
             <Content>
             <Title > 결과보기 </Title>
             <LogoImage>
-                <img  src={resultData.image} className="rounded-circle" width={350} height={350}></img>
-                {/* <img  src={resultData.image} className="rounded-circle img_size" ></img> */}
+                <img alt="고양이사진" src={resultData.image} className="rounded-circle" width={350} height={350}></img>
             </LogoImage>
             <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
             <Button variant="outline-success" style={{fontSize: "20px"}}
