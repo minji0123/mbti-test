@@ -15,8 +15,9 @@ const KakaoShareBtn = () => {
         Kakao.init('803540667654c12ed42b3fb9e6fbf9d3');
         console.log(Kakao.isInitialized());
     },[]);
-
-    Kakao.Share.sendDefault({
+    
+    const shareKakao = () => {
+    Kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
           title: '예비집사 판별기 결과',
@@ -39,6 +40,7 @@ const KakaoShareBtn = () => {
 
         ]
       });
+    }
 
     return(
         <Button variant="outline-success" style={{fontSize: "20px", marginLeft:'20px'}}
