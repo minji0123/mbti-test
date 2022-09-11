@@ -21,7 +21,7 @@ const Home = () => {
             <LogoImage>
                 <img alt="고양이사진" src={PangImage} className="rounded-circle" width={350} height={350}></img>
             </LogoImage>
-            <Desc>MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
+            <Desc>MBTI 기반 나랑 잘맞는 고양이 찾기!</Desc>
             <Button variant="outline-success" style={{fontSize: "20px"}}
                     onClick={handleClickButton}
             >시작하기</Button>
@@ -37,6 +37,7 @@ const Wrapper = styled.div`
     height: 100vh;
     width:100%;
     font-family:"Cute Font";
+    padding:25px;
 
 `
 

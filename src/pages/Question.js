@@ -83,6 +83,7 @@ const Wrapper = styled.div`
     height: 100vh;
     width:100%;
     font-family:'Cute Font';
+    padding:25px;
 
 `
 

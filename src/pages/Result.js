@@ -18,7 +18,7 @@ const Result = () => {
         const result = ResultData.find((s) => {return s.best === mbti});
         setResultData(result);
     },[mbti])
-    // console.log('ㄴㅇㄴㅇ',resultData);
+    console.log('ㄴㅇㄴㅇ',resultData);
 
     return(
         <Wrapper>
@@ -29,7 +29,7 @@ const Result = () => {
                 <img alt="고양이사진" src={resultData.image} className="rounded-circle" width={350} height={350}></img>
             </LogoImage>
             <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
-
+            <More>{resultData.desc}</More>
             <ButtonGroup>
                 <Button variant="outline-success" style={{fontSize: "20px"}}
                         onClick={() => navigate("/")}
@@ -49,7 +49,7 @@ const Wrapper = styled.div`
     height: 100vh;
     width:100%;
     font-family:"Cute Font";
-
+    padding:25px;
 `
 
 const Header = styled.div`
@@ -74,8 +74,13 @@ const Desc = styled.div`
     font-size: 20pt;
     margin-top:20px;
     margin-bottom:20px;
-
 `
+const More = styled.div`
+    font-size: 18pt;
+    margin-top:20px;
+    margin-bottom:20px;
+`
+
 const Content = styled.div`
     font-size: 20pt;
     display: flex;
@@ -89,4 +94,6 @@ const ButtonGroup = styled.div`
     justify-content:center;
     align-items:center;
     flex-direction:row;
+    margin-bottom:20px;
+
 `
