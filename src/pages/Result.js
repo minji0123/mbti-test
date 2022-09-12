@@ -21,7 +21,7 @@ const Result = () => {
     // console.log('ㄴㅇㄴㅇ',resultData);
 
     return(
-        <div  className='ele_center_whole'>
+        // <div  className='ele_center_whole'>
             <Wrapper>
                 <Header > 예비집사 판별기 </Header>
                 <Content>
@@ -41,7 +41,7 @@ const Result = () => {
 
                 </Content>
             </Wrapper>
-        </div>
+        // </div>
     );
 }
 
@@ -52,6 +52,7 @@ const Wrapper = styled.div`
     width:100%;
     font-family:"Cute Font";
     padding:25px;
+
 `
 
 const Header = styled.div`

@@ -55,7 +55,7 @@ const Question = () => {
 
 
     return(
-        <div  className='ele_center_whole'>
+        // <div  className='ele_center_whole'>
             <Wrapper >
                 <ProgressBar striped variant="danger" now={(questionNo/QuestionData.length)*100 } className="mt_40"/>
                 <Title > {QuestionData[questionNo].title} </Title>
@@ -75,7 +75,7 @@ const Question = () => {
                     </Button>
                 </ButtonGroup>
             </Wrapper>
-        </div>
+        // </div>
     );
 }
 

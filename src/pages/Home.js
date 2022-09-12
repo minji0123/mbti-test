@@ -14,7 +14,7 @@ const Home = () => {
     }
 
     return(
-        <div className='ele_center_whole'>
+        // <div className='ele_center_whole'>
             <Wrapper>
                 <Header > 예비집사 판별기 </Header>
                 <Content>
@@ -28,7 +28,7 @@ const Home = () => {
                 >시작하기</Button>
                 </Content>
             </Wrapper>
-        </div>
+        // </div>
     );
 }
 
