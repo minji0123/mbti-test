@@ -18,28 +18,30 @@ const Result = () => {
         const result = ResultData.find((s) => {return s.best === mbti});
         setResultData(result);
     },[mbti])
-    console.log('ㄴㅇㄴㅇ',resultData);
+    // console.log('ㄴㅇㄴㅇ',resultData);
 
     return(
-        <Wrapper>
-            <Header > 예비집사 판별기 </Header>
-            <Content>
-            <Title > 결과보기 </Title>
-            <LogoImage>
-                <img alt="고양이사진" src={resultData.image} className="rounded-circle" width={350} height={350}></img>
-            </LogoImage>
-            <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
-            <More>{resultData.desc}</More>
-            <ButtonGroup>
-                <Button variant="outline-success" style={{fontSize: "20px"}}
-                        onClick={() => navigate("/")}
-                >테스트 다시하기</Button>
-                <KakaoShareBtn data={resultData}/>
-                
-            </ButtonGroup>
+        <div  className='ele_center_whole'>
+            <Wrapper>
+                <Header > 예비집사 판별기 </Header>
+                <Content>
+                <Title > 결과보기 </Title>
+                <LogoImage>
+                    <img alt="고양이사진" src={resultData.image} className="rounded-circle" width={350} height={350}></img>
+                </LogoImage>
+                <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
+                <More>{resultData.desc}</More>
+                <ButtonGroup>
+                    <Button variant="outline-success" style={{fontSize: "20px"}}
+                            onClick={() => navigate("/")}
+                    >테스트 다시하기</Button>
+                    <KakaoShareBtn data={resultData}/>
+                    
+                </ButtonGroup>
 
-            </Content>
-        </Wrapper>
+                </Content>
+            </Wrapper>
+        </div>
     );
 }
 

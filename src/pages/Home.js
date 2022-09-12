@@ -14,19 +14,21 @@ const Home = () => {
     }
 
     return(
-        <Wrapper>
-            <Header > 예비집사 판별기 </Header>
-            <Content>
-            <Title > 나에게 맞는 주인님은? </Title>
-            <LogoImage>
-                <img alt="고양이사진" src={PangImage} className="rounded-circle" width={350} height={350}></img>
-            </LogoImage>
-            <Desc>MBTI 기반 나랑 잘맞는 고양이 찾기!</Desc>
-            <Button variant="outline-success" style={{fontSize: "20px"}}
-                    onClick={handleClickButton}
-            >시작하기</Button>
-            </Content>
-        </Wrapper>
+        <div className='ele_center_whole'>
+            <Wrapper>
+                <Header > 예비집사 판별기 </Header>
+                <Content>
+                <Title > 나에게 맞는 주인님은? </Title>
+                <LogoImage>
+                    <img alt="고양이사진" src={PangImage} className="rounded-circle" width={350} height={350}></img>
+                </LogoImage>
+                <Desc>MBTI 기반 나랑 잘맞는 고양이 찾기!</Desc>
+                <Button variant="outline-success" style={{fontSize: "20px"}}
+                        onClick={handleClickButton}
+                >시작하기</Button>
+                </Content>
+            </Wrapper>
+        </div>
     );
 }
 

@@ -23,6 +23,12 @@
 
 }
 
+.ele_center_whole{
+  width: 550px;
+  display: block;
+  margin: 0 auto;
+  background: cornsilk;
+}
 .right_btn{
   width:40%;
   min-height: 200px;

@@ -55,25 +55,27 @@ const Question = () => {
 
 
     return(
-        <Wrapper >
-            <ProgressBar striped variant="danger" now={(questionNo/QuestionData.length)*100 } className="mt_40"/>
-            <Title > {QuestionData[questionNo].title} </Title>
-            <ButtonGroup className="mt_20">
-                <Button 
-                    variant="outline-success" 
-                    className="left_btn"
-                    onClick={() => handleClickBtn(1,QuestionData[questionNo].type)}
-                >{QuestionData[questionNo].answera}
-                </Button>
+        <div  className='ele_center_whole'>
+            <Wrapper >
+                <ProgressBar striped variant="danger" now={(questionNo/QuestionData.length)*100 } className="mt_40"/>
+                <Title > {QuestionData[questionNo].title} </Title>
+                <ButtonGroup className="mt_20">
+                    <Button 
+                        variant="outline-success" 
+                        className="left_btn"
+                        onClick={() => handleClickBtn(1,QuestionData[questionNo].type)}
+                    >{QuestionData[questionNo].answera}
+                    </Button>
 
-                <Button 
-                variant="outline-success" 
-                className="right_btn"
-                onClick={() => handleClickBtn(0,QuestionData[questionNo].type)}
-                >{QuestionData[questionNo].answerb}
-                </Button>
-            </ButtonGroup>
-        </Wrapper>
+                    <Button 
+                    variant="outline-success" 
+                    className="right_btn"
+                    onClick={() => handleClickBtn(0,QuestionData[questionNo].type)}
+                    >{QuestionData[questionNo].answerb}
+                    </Button>
+                </ButtonGroup>
+            </Wrapper>
+        </div>
     );
 }
 
